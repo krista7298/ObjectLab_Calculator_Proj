@@ -1,10 +1,12 @@
+```csharp
 /*******************************************************************
 * Name: Krista Agustin
-* Date: 06/26/2026
-* Assignment SDC220 Calculator Project Phase #2
+* Date: 07/12/2026
+* Assignment SDC220 Calculator Project Phase #4
 *
 * Calculator class.
-* This class performs basic calculator operations.
+* This class performs basic mathematical operations and throws an
+* exception when division by zero is attempted.
 */
 
 public class Calculator
@@ -26,6 +28,12 @@ public class Calculator
 
     public double Divide(double num1, double num2)
     {
+        if (num2 == 0)
+        {
+            throw new DivideByZeroException();
+        }
+
         return num1 / num2;
     }
 }
+```
